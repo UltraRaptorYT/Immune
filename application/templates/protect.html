@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}{% include "includes/nav.html" %}
+<div
+  class="w-5/6 md:w-1/2 mx-auto mt-5 flex flex-col justify-center items-center gap-4 mb-12"
+>
+  <img
+    src="{{ url_for('static',filename='images/ImmuneTagBlack.png')}}"
+    class="w-2/12"
+  />
+  <div class="grid lg:grid-cols-2 justify-center gap-7">
+    {% for illness, illObj in helpline.items() %}
+    <section class="flex flex-col gap-5 justify-between items-center mb-6">
+      <h2 class="text-3xl font-bold" id="{{illness}}">About {{illness}}</h2>
+      <p>{{illObj["description"]}}</p>
+      <a
+        class="py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white rounded-full transition duration-200"
+        href="/illness/{{ illness }}"
+        >Learn More About {{illness}}</a
+      >
+    </section>
+    {% endfor %}
+  </div>
+</div>
+<br />
+{% include "includes/footer.html" %} {% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block content %}{% include "includes/nav.html" %}
+<div class="w-5/6 md:w-1/3 mx-auto mt-5 flex flex-col justify-center items-center gap-5 mb-12">
+  <img
+        src="{{ url_for('static',filename='images/ImmuneTagBlack.png')}}"
+        class="w-4/12"
+      />
+  <section>
+    <h2 class="text-3xl font-bold">About Immune</h2>
+    <p>
+      Immune is designed for Singaporeans. The purpose is to allow Singaporeans
+      to let them better understand the different symptoms of Covid, Cold, Flu
+      and Allergy.
+    </p>
+  </section>
+  <section>
+    <h2 class="text-3xl font-bold">Why Immune</h2>
+    <p>
+      In Singapore, due to our humid environment, many people get cold and flu.
+      In 2021, 588 deaths caused by flu and the cold in Singapore alone.
+      Furthermore, 24% of Singaporeans are allergic to pollen. As the symptoms
+      of all 3 illness are very similar, knowing which one you have is very
+      crucial especially if it is very serious.
+      <br />
+      <br />
+      During the Covid 19 pandemic many Singaporeans despite having a small
+      symptoms like cough and sneezing, they will go to their nearby hospitals
+      and general clinics to check if they have been infected by Covid-19. This
+      not only increase the likelihood of other Singaporeans getting affected as
+      they travel along the common corridors in Singapore, but also increase the
+      workload of the hospitals and general clinics. This prompted the
+      Singaporean Government to launch campaigns to promote and educate citizens
+      on what they can do when they experience symptoms similar to Covid-19.
+    </p>
+  </section>
+</div>
+<br/>
+{% include "includes/footer.html" %} {% endblock %}
